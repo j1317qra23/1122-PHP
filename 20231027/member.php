@@ -9,13 +9,14 @@
     <?php
     if($_GET['login']==1){
         echo "<h3>登入成功</h3>";
+        echo "<a href='login.php?login=1')>回登入頁</a>";
     }
     else{ 
         header("location:login.php");
         // echo "沒有登入驗證，非法登入";
 
         }
-    
     ?>
+
 </body>
 </html>
