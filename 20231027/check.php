@@ -1,9 +1,13 @@
 <?php
+session_start();
+// 上課才一直開，外面不會有資安問題
 if($_POST['acc']=='admin' && $_POST['pw']=='1234'){
-    header("location:member.php?login=1");
+    $_SESSION['login']=$_POST['acc'];
+    header("location:member.php");
     // echo "登入成功";
 }else{
-        header("location:login.php?m=登入失敗");
+    $_SESSION['error']="帳號密碼錯誤，請重新登入";
+        header("location:login.php");
 // echo "登入失敗";}
   
     } 
