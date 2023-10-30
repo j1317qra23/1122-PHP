@@ -10,12 +10,9 @@
     <title>心情小站</title>
 </head>
 <body>
-<header>
-    <a href="index.php">回首頁</a>
-    <a href="login.php">登入</a>
-    <a href="login.php">登出</a>
-    <a href="member.php">會員中心</a>    
-</header>
+<?php
+include_once "header.php"
+?>
 <h2 style='text-align:center'>xxxA購物中心</h2>
 </body>
 </html>
