@@ -43,6 +43,9 @@ include_once "header.php"
 <div class='login-block'>
     <?php
     session_start();
+    if(isset($_SESSION['login']) && !empty($_SESSION['login'])){
+        include_once "header.php";
+    }
     if(isset($_SESSION['error'])){
         echo "<span style='color:red'>".$_SESSION['error']."</span>";
         unset($_SESSION['error']);
