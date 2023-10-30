@@ -1,11 +1,12 @@
+<?php include_once "session.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>會員登入</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        
         .login-block{
             padding:30px 40px;
             border:1px solid #999;
@@ -38,21 +39,20 @@
 </head>
 <body>
 <?php
-include_once "header.php"
+
+    include_once "header.php";
+
 ?>
 <div class='login-block'>
     <?php
-    session_start();
-    if(isset($_SESSION['login']) && !empty($_SESSION['login'])){
-        include_once "header.php";
-    }
+   
     if(isset($_SESSION['error'])){
         echo "<span style='color:red'>".$_SESSION['error']."</span>";
         unset($_SESSION['error']);
     }
     
     if(isset($_SESSION['login']) && !empty($_SESSION['login'])){
-        echo $_SESSION['login']."歡迎你";
+        echo $_SESSION['login']." 歡迎你";
         echo "<a href='logout.php'>登出</a>";
     }else{
 ?>

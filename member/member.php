@@ -8,10 +8,10 @@
 </head>
 <body>
 <?php
-include_once "header.php"
+include_once "header.php";
 ?>
     <?php
-    session_start();
+
     if(isset($_SESSION['login']) && !empty($_SESSION['login'])){
         echo "<h3>登入成功</h3>";
         echo "<a href='login.php?')>回登入頁</a>";

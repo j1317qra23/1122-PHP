@@ -1,5 +1,5 @@
 <?php
-session_start();
+include_once "session.php";
 // 上課才一直開，外面不會有資安問題
 if($_POST['acc']=='admin' && $_POST['pw']=='1234'){
     $_SESSION['login']=$_POST['acc'];
