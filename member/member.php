@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>會員中心</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header>
+    <a href="index.php">回首頁</a>
+    <a href="login.php">登入</a>
+    <a href="login.php">登出</a>
+    <a href="member.php">會員中心</a>    
+</header>
     <?php
     session_start();
     if(isset($_SESSION['login']) && !empty($_SESSION['login'])){
